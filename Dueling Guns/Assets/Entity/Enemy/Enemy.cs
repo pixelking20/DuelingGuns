@@ -8,7 +8,7 @@ public class Enemy : Entity {
 	public float stayTime = 5.0f;
 
 	// Use this for initialization
-	void Start () {
+	new void Start () {
 		base.Start();
 		destonation = new Vector2(Random.value * 2.6f - 1.3f, Random.value - 0.5f);
 		if (Random.value > 0.5)
@@ -19,9 +19,6 @@ public class Enemy : Entity {
 
 	// Update is called once per frame
 	void Update () {
-		//movement for enemy to come on screen
-
-		//shoot projectiles
 
 	}
 }
