@@ -13,8 +13,11 @@ GameObject:
   - component: {fileID: 61579741300384726}
   - component: {fileID: 50276413690761836}
   - component: {fileID: 114054027548208640}
-  - component: {fileID: 5439308457109600055}
-  m_Layer: 0
+  - component: {fileID: 229150912579061220}
+  - component: {fileID: 828706153149311494}
+  - component: {fileID: 5870569383839559174}
+  - component: {fileID: -2783067882181799173}
+  m_Layer: 8
   m_Name: Player1
   m_TagString: Player1
   m_Icon: {fileID: 0}
@@ -146,7 +149,33 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0.25
   Boundries: 0.9
---- !u!114 &5439308457109600055
+--- !u!114 &229150912579061220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489343647562738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfba1e7ab701bde4a9ed5b693cfbc38a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PS: {fileID: 0}
+--- !u!114 &828706153149311494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489343647562738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95937c1ab2d8dd24ba9b4718d7f6fdba, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerID: 0
+--- !u!114 &5870569383839559174
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -159,5 +188,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1723994267427474, guid: 2db9807f92c5d5948b0e9c23985ec498, type: 3}
-  BMScript: {fileID: 0}
   reloadTime: 1
+--- !u!114 &-2783067882181799173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489343647562738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05eb4d2ece4934f45805750348f5bd58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectScore: 25

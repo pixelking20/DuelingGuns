@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class BulletCollision : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public ScoreManager SM;
+    public int OwnerID;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+   void OnTriggerEnter2D(Collider2D c){
+	    int points = c.gameObject.GetComponent<Score>().objectScore;
+        SM.ScoreIncrement(OwnerID, points);
+        Destroy(c.gameObject);
+        print("Destroy Called");
+        if (c.tag != "EnemyBullet")
+            Destroy(this.gameObject);
+	}
 }

@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4146395567982560}
   - component: {fileID: 114035923265455952}
   - component: {fileID: 6716251120695658761}
+  - component: {fileID: -3479000523319902276}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -48,13 +49,8 @@ MonoBehaviour:
     type: 3}
   player2Prefab: {fileID: 1480374803294672, guid: 491c99a26320cdc4a80035ce9e015ee1,
     type: 3}
-  player1Spawner: {fileID: 0}
-  player2Spawner: {fileID: 0}
-  player1: {fileID: 0}
-  player2: {fileID: 0}
-  enemies: []
-  player1RespawnTime: 1
-  player2RespawnTime: 1
+  playerSpawner: {fileID: 0}
+  playerRespawnTime: 3
 --- !u!114 &6716251120695658761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -65,5 +61,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bb47d8657fd21e448696cb6d47bf80f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-3479000523319902276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450215081158232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 839508fd16f97c441aebea524598a8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

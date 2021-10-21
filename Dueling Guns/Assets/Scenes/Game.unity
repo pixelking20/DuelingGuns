@@ -128,6 +128,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1489343647562738, guid: 033a6209c546e384193790afd85374c1, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 4629132406646774, guid: 033a6209c546e384193790afd85374c1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.8
@@ -199,6 +203,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4146395567982560, guid: 67b6dc02f3cfdfe43a89eed95e79c1cc, type: 3}
       propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114035923265455952, guid: 67b6dc02f3cfdfe43a89eed95e79c1cc,
+        type: 3}
+      propertyPath: Lives
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114035923265455952, guid: 67b6dc02f3cfdfe43a89eed95e79c1cc,
+        type: 3}
+      propertyPath: playerRespawnTime
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -293,6 +307,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5187507129269512183, guid: 491c99a26320cdc4a80035ce9e015ee1,
+        type: 3}
+      propertyPath: bullet
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4122765374230294, guid: 491c99a26320cdc4a80035ce9e015ee1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.8
@@ -325,7 +344,8 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -5187507129269512183, guid: 491c99a26320cdc4a80035ce9e015ee1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 491c99a26320cdc4a80035ce9e015ee1, type: 3}
 --- !u!1 &1920025769
 GameObject:

@@ -13,6 +13,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 	public float playerRespawnTime = 3.0f;
 
+	[SerializeField]
 	private int Lives;
 	private int[] LivesCount;
 
@@ -21,21 +22,30 @@ public class PlayerSpawner : MonoBehaviour {
 		LivesCount = new int[]{Lives, Lives};
 	}
 
-	IEnumerator PlayerSpawn (int i){
+	public IEnumerator PlayerSpawn (int i){
+		print("coroutine started");
+		--LivesCount[i];
 		if (LivesCount[i] == 0){
-			//endgame
+			print("endgame");
 		}
-		else
-			--LivesCount[i];
+		print("wait called");
+		print(Time.timeScale);
 		yield return new WaitForSeconds(playerRespawnTime);
+		print("wait ended");
 		if (i == 0){
 			Instantiate(player1Prefab, playerSpawner.transform.position, playerSpawner.transform.rotation);
+			print("Player1 spawned");
 		}
 		else{
-			Instantiate(player1Prefab, playerSpawner.transform.position *-1, Quaternion.Inverse(playerSpawner.transform.rotation));
+			Instantiate(player2Prefab, playerSpawner.transform.position *-1, Quaternion.Inverse(playerSpawner.transform.rotation));
+			print("Player2 spawned");
 		}
 	}
 	public void setLives(int i){
 		Lives = i;
+	}
+
+	public void StartRespawn(int i){
+		StartCoroutine(PlayerSpawn(i));
 	}
 }
