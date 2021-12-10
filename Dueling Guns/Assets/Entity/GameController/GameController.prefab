@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 114035923265455952}
   - component: {fileID: 6716251120695658761}
   - component: {fileID: -3479000523319902276}
+  - component: {fileID: 100596056747734316}
   m_Layer: 0
   m_Name: GameController
   m_TagString: GameController
@@ -51,6 +52,7 @@ MonoBehaviour:
     type: 3}
   playerSpawner: {fileID: 0}
   playerRespawnTime: 3
+  Lives: 0
 --- !u!114 &6716251120695658761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -75,3 +77,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 839508fd16f97c441aebea524598a8bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player1Score: 0
+  Player2Score: 0
+--- !u!114 &100596056747734316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450215081158232}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f89f60bd2d336c4783692b3732feb5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TotalWave: {fileID: 11400000, guid: 74fda274398e5934c8528a85f20f3aa0, type: 2}

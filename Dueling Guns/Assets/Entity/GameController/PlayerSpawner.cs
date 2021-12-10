@@ -5,46 +5,53 @@ using UnityEngine;
 public class PlayerSpawner : MonoBehaviour {
 
 	
+	[SerializeField]
+	private GameObject player1Prefab;
 
-	public GameObject player1Prefab;
-	public GameObject player2Prefab;
+	[SerializeField]
+	private GameObject player2Prefab;
 
-	public GameObject playerSpawner;
+	[SerializeField]
+	private GameObject playerSpawner;
 
-	public float playerRespawnTime = 3.0f;
+	[SerializeField]
+	private float playerRespawnTime = 3.0f;
 
 	[SerializeField]
 	private int Lives;
-	private int[] LivesCount;
+	private int[] playerLivesCount;
 
 	void Start () {
+		//playerSwawner is an empty gameobject that is just used to store the place where players should spawn and so that place can be easily moved in the editor.
 		playerSpawner = GameObject.FindGameObjectsWithTag("PlayerSpawner")[0];
-		LivesCount = new int[]{Lives, Lives};
+		//The array that's used to store the current lives during gameplay.
+		playerLivesCount = new int[]{Lives, Lives};
 	}
 
+	//gets passed the playerID from PlayerCollision
 	public IEnumerator PlayerSpawn (int i){
-		print("coroutine started");
-		--LivesCount[i];
-		if (LivesCount[i] == 0){
+		//modifies the set number of lives and then checks to see if either player has reached 0 lives.
+		--playerLivesCount[i];
+		if (playerLivesCount[i] == 0){
+			//there will eventually be a mothod that ends the game and transitions scenes here.
 			print("endgame");
 		}
-		print("wait called");
-		print(Time.timeScale);
 		yield return new WaitForSeconds(playerRespawnTime);
-		print("wait ended");
+		//if it's player 0, spawn them at the position. if it's player 1, spawn them at the inverse of the position and rotation.
 		if (i == 0){
 			Instantiate(player1Prefab, playerSpawner.transform.position, playerSpawner.transform.rotation);
-			print("Player1 spawned");
 		}
 		else{
 			Instantiate(player2Prefab, playerSpawner.transform.position *-1, Quaternion.Inverse(playerSpawner.transform.rotation));
-			print("Player2 spawned");
 		}
 	}
+
+	//used by the options in the starter scene.
 	public void setLives(int i){
 		Lives = i;
 	}
 
+	//used by playerCollision.
 	public void StartRespawn(int i){
 		StartCoroutine(PlayerSpawn(i));
 	}
